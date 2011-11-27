@@ -154,9 +154,8 @@ var freekickplus = {
 
 	},
 	getTooltipMessage: function(playClass) {
-		if (playClass) {
-			return freekickplus._tooltipLang[freekickplus.lang][playClass];
-		}
+		playClass = playClass || 'en';
+		return freekickplus._tooltipLang[freekickplus.lang][playClass];
 	},
 	setStyle: function(node) {
 		node.setAttribute('class', freekickplus.player.seasonsPlayClass);
