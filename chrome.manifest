@@ -1,0 +1,7 @@
+content   freekickplus                 chrome/content/
+skin      freekickplus   classic/1.0   chrome/skin/
+locale    freekickplus   en-US         chrome/locale/en-US/
+locale    freekickplus   ru-RU         chrome/locale/ru-RU/
+
+
+overlay   chrome://browser/content/browser.xul   chrome://freekickplus/content/ff-overlay.xul

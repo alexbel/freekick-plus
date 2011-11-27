@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://freekickplus/skin/overlay.css" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://freekickplus/locale/overlay.dtd">
+<overlay id="freekickplus-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <script src="overlay.js"/>
+
+  <stringbundleset id="stringbundleset">
+    <stringbundle id="freekickplus-strings" src="chrome://freekickplus/locale/overlay.properties"/>
+  </stringbundleset>
+
+	<popupset>
+    <menupopup id="freekickplus-popup">
+      <menuitem id="enable" label="&enable;" type="radio"  name="status" oncommand="freekickplus.enable();"/>	
+			<menuitem id="disable" label="&disable;" type="radio" name="status" oncommand="freekickplus.disable();"/>	
+      <menuseparator />
+      <menuitem label="&about;" tooltiptext='&about;' oncommand='freekickplus.showAboutDialog();'/>
+		</menupopup>
+	</popupset>
+		
+		<statusbar id="status-bar">
+      <statusbarpanel 
+        popup="freekickplus-popup"
+        id="freekickplus-status-bar-icon" 
+        class="statusbarpanel-iconic freekickStatusbarPanelEnable" 
+        tooltiptext="runfreekickplus" 
+        />
+		</statusbar>
+
+
+
+</overlay>

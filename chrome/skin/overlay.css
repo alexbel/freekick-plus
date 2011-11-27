@@ -1,0 +1,6 @@
+.freekickStatusbarPanelEnable {
+  list-style-image: url("chrome://freekickplus/skin/status-bar.png");
+}
+.freekickStatusbarPanelDisable {
+  list-style-image: url("chrome://freekickplus/skin/status-bar-disable.png");
+}
