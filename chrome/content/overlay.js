@@ -190,7 +190,7 @@ var freekickplus = {
 	// private functions
 	//
 	_getServerDate: function() {
-		var rawHtml = document.getElementsByClassName('page-info-date');
+		var rawHtml = content.document.getElementsByClassName('page-info-row')[0].innerHTML;
 		var myRe = /(\d{4,4})-(\d{1,2})-(\d{1,2})/gi;
 		var arr = myRe.exec(rawHtml);
 		return new Date(arr[1], arr[2] - 1, arr[3]);
