@@ -4,6 +4,7 @@ var freekickplus = {
 	BEGINSEASON: new Date(2010, 2, 15),
 	SEASONDURATIONDAYS: 98,
 	lang: false,
+	multipleUrls: ['?loc=players', '?loc=youth_players', '?loc=senior_players', '?loc=transfers'],
 
 	init: function() {
 		freekickplus.prefs = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefBranch);
@@ -66,7 +67,7 @@ var freekickplus = {
 	getAgeNodes: function() {
 		var nodes = [];
 
-		if (content.document.location.search === '?loc=players') {
+		if (freekickplus.multipleUrls.indexOf(content.document.location.search) >=0){
 			nodes = freekickplus.getPlayerAgeNodes();
 		} else {
 			nodes.push(freekickplus.getPlayerAgeNode());
@@ -75,18 +76,22 @@ var freekickplus = {
 	},
 	getPlayerAgeNodes: function() {
 		// try to get age of all players
-		var spans = content.document.getElementsByClassName('minimal algnR padded-right');
-		if (spans && spans.length !== 0) {
-			var editableNodes = [];
-			var i = 0;
-			for (i; i < spans.length; ++i) {
-				var node = spans[i].getElementsByTagName('span')[0];
-				if (node) {
-					editableNodes.push(node);
+		var spans;
+		if (content.document.location.search === '?loc=transfers'){
+			return content.document.getElementsByClassName('age-youth');
+		} else {
+			spans = content.document.getElementsByClassName('minimal algnR padded-right');
+			if (spans && spans.length !== 0) {
+				var editableNodes = [];
+				var i = 0;
+				for (i; i < spans.length; ++i) {
+					var node = spans[i].getElementsByTagName('span')[0];
+					if (node) {
+						editableNodes.push(node);
+					}
 				}
-
+				return editableNodes;
 			}
-			return editableNodes;
 		}
 	},
 	getPlayerAgeNode: function() {
@@ -163,7 +168,7 @@ var freekickplus = {
 		var onmouseoverText = node.getAttribute('onmouseover');
 		var re;
 
-		if (content.document.location.search === '?loc=players') {
+		if (freekickplus.multipleUrls.indexOf(content.document.location.search) >= 0 ){
 			re = /\<br\s\/\>\<br\s\/\>(.*)\.\'/gi;
 		} else {
 			re = /Tip\(\'(.+)\'\,/gi;
@@ -171,7 +176,10 @@ var freekickplus = {
 
 		var result = re.exec(onmouseoverText);
 		var newText = onmouseoverText.replace(result[1], freekickplus.player.tooltipMessage);
+		//
 		node.setAttribute('onmouseover', newText);
+		//TODO: still working on migration to using addEventListener
+		//current problem: https://forums.mozilla.org/addons/viewtopic.php?f=11&t=4621
 
 	},
 	parsePlayerAge: function(nodes) {
@@ -201,8 +209,7 @@ var freekickplus = {
 		}
 		var text;
 		var re = /([1-4][0-9])\s.\,\s(1?[0-9])\s.\,\s([0-9]+)\s/ig;
-
-		if (content.document.location.search === '?loc=players') {
+		if (freekickplus.multipleUrls.indexOf(content.document.location.search) >=0 ) {
 			text = node.getAttribute('onmouseover');
 		} else {
 			text = node.innerHTML;
