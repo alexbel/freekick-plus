@@ -8,11 +8,25 @@
   <groupbox align="center" orient="horizontal">
     <vbox>
       <image src="chrome://freekickplus/skin/freekickplus-about.png" style="padding: 0px 5px"/>
-      <text value="version 0.1.8"/>
+      <text value="This add-on allows you use some functions in www.freekick.org" />
+      <text value="It is only two functions right now:" />
+      <text value="- Shows age of youth players as if you have a VIP subscription." />
+      <text value="- Shows match colors" />
+      <separator class="thin"/>
+      <text value="Supported languages:" />
+      <text value="- english" />
+      <text value="- russian" />
+      <text value="- ukrainian" />
+
+      <separator class="thin"/>
+      <text value="version 0.2.0"/>
+
       <separator class="thin"/>
       <text value="&createdBy;" style="font-weight: bold;"/>
       <text value="Alexander Belyaev"/>
+
       <separator class="thin"/>
+      <label value="Home page" onclick="openURL(event.target.getAttribute('href')" href="https://addons.mozilla.org/en-US/firefox/addon/freekick/" style="cursor: pointer; color: blue; text-decoration: underline;" />
       <label value="alexander.e.belyaev@gmail.com" style="cursor: pointer; width: 100px; color: blue; text-decoration: underline;" href="mailto:alexander.e.belyaev@gmail.com" onclick="openURL(event.target.getAttribute('href'));"/>
     </vbox>
   </groupbox>
