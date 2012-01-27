@@ -24,6 +24,9 @@ var freekickplus = {
 		if (freekickplus.checkFreekickDomain() && freekickplus.enabled) {
 			freekickplus.getLang();
 			freekickplus.calcPlayersAge();
+			freekickplus.matchCss('enable');
+		} else {
+			freekickplus.matchCss('disable');
 		}
 	},
 	checkFreekickDomain: function() {
@@ -42,6 +45,22 @@ var freekickplus = {
 		freekickplus._switchCheckedStatus(true);
 		freekickplus.enabled = true;
 		freekickplus.prefs.setBoolPref("extensions.freekickplus.enabled", true);
+	},
+	matchCss: function(action){
+		var sss = Components.classes["@mozilla.org/content/style-sheet-service;1"]
+													.getService(Components.interfaces.nsIStyleSheetService);
+		var ios = Components.classes["@mozilla.org/network/io-service;1"]
+													.getService(Components.interfaces.nsIIOService);
+		var uri = ios.newURI("chrome://freekickplus/content/match_colors.css", null, null);
+		if (action == 'enable'){
+			if(!sss.sheetRegistered(uri, sss.USER_SHEET)){
+				sss.loadAndRegisterSheet(uri, sss.USER_SHEET);
+			} 
+		} else {
+			if(sss.sheetRegistered(uri, sss.USER_SHEET)){
+				sss.unregisterSheet(uri, sss.USER_SHEET);
+			} 
+		}
 	},
 	disable: function() {
 		freekickplus._changeStatusIconState();
@@ -180,6 +199,11 @@ var freekickplus = {
 		node.setAttribute('onmouseover', newText);
 		//TODO: still working on migration to using addEventListener
 		//current problem: https://forums.mozilla.org/addons/viewtopic.php?f=11&t=4621
+		//
+		//node.removeAttribute('onmouseover');	
+		//node.addEventListener('mouseover', function(){ 
+			//content.window.Tip('window Tip.', BGCOLOR, '#FFFFCC', BORDERCOLOR, '#000000', FONTCOLOR, '#000000', DELAY, 500, WIDTH, -350, OFFSETX, -125);
+		//},true);
 
 	},
 	parsePlayerAge: function(nodes) {

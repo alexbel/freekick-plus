@@ -1,0 +1,72 @@
+/* match colors*/
+.matchreport-dreadful, .matchreport_dreadful {
+  color: #cc3300 !important;
+}
+.matchreport-awful, .matchreport_awful, .matchreport-too_late, .matchreport-fooled  {
+color: #CC3300 !important;
+}
+.matchreport-poor, .matchreport_poor {
+ color: #FF7711 !important;
+}
+.matchreport-weak, .matchreport_weak, .matchreport-hesitant, .matchreport-close {
+ color: #339999 !important;
+}
+.matchreport-decent, .matchreport_decent {
+ color: #333333 !important;
+}
+.matchreport-good, .matchreport_good  {
+ color: #008800 !important;
+}
+.matchreport-excellent, .matchreport_excellent {
+ color: #0055EE !important;
+}
+.matchreport-superb, .matchreport_superb {
+ color: #7700DD !important;
+}
+.matchreport-brilliant, .matchreport_brilliant, .matchreport-there {
+ color: #CC33CC !important;
+}
+.matchreport-awesome, .matchreport_awesome, .matchreport-right_spot, .matchreport-prepared {
+ color: #FF33CC !important;
+}
+.matchreport-masterful, .matchreport_masterful {
+ color: #FF8833 !important;
+ font-weight: bold !important;
+font-style: normal !important;
+}
+.matchreport-unbelievable, .matchreport_unbelievable {
+ color: #DD6611 !important;
+ font-weight: bold !important;
+ font-style: normal !important;
+}
+.matchreport-legendary, .matchreport_legendary {
+  color: #BB3311 !important;
+  font-weight: bold !important;
+}
+
+.matchreport-totally_wrong {
+  color: #CC3300 !important;
+}
+.matchreport_net_wide_open {
+  color: #ff33cc !important;
+  font-weight: bold !important;
+}
+.matchreport-ready {
+  color: #fa33cc !important;
+  font-weight: bold !important;
+}
+.matchreport_close {
+  color: #339999 !important;
+}
+.matchreport_totally_free {
+  color: #ff33cc !important;
+  font-weight: bold !important;
+}
+.matchreport-net_wide_open {
+  color: #ff33cc !important;
+  font-weight: bold !important;
+}
+
+.matchreport-goal {
+ font-weight: bold !important;
+}
