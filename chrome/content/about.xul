@@ -26,8 +26,8 @@
       <text value="Alexander Belyaev"/>
 
       <separator class="thin"/>
-      <label value="Home page" onclick="openURL(event.target.getAttribute('href')" href="https://addons.mozilla.org/en-US/firefox/addon/freekick/" style="cursor: pointer; color: blue; text-decoration: underline;" />
-      <label value="alexander.e.belyaev@gmail.com" style="cursor: pointer; width: 100px; color: blue; text-decoration: underline;" href="mailto:alexander.e.belyaev@gmail.com" onclick="openURL(event.target.getAttribute('href'));"/>
+      <label value="Home page" href="https://addons.mozilla.org/en-US/firefox/addon/freekick/" style="float: left; border: none;" class="text-link" />
+      <label class="text-link" value="alexander.e.belyaev@gmail.com" style="border: none;" href="mailto:alexander.e.belyaev@gmail.com" />
     </vbox>
   </groupbox>
 </dialog>
