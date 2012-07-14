@@ -14,7 +14,7 @@ Supported languages:
 
 Screenshots:  
 One player  
-<img src='https://github.com/alexbel/freekick-plus/tree/master/screenshots/one_player.png' alt="one player">
+<img src='https://github.com/alexbel/freekick-plus/raw/master/screenshots/one_player.png' alt="one player">
 
 Youth team  
-<img src='https://github.com/alexbel/freekick-plus/tree/master/screenshots/youth_team.png' alt="youth team">
+<img src='https://github.com/alexbel/freekick-plus/raw/master/screenshots/youth_team.png' alt="youth team">
