@@ -9,3 +9,15 @@ Supported languages:
 *   English
 *   Russian
 *   Ukrainian
+
+[Mozilla Addon Page](https://addons.mozilla.org/en-US/firefox/addon/freekick/)
+
+Screenshots:
+<figure>
+  <img src='https://github.com/alexbel/freekick-plus/tree/master/screenshots/one_player.png' alt="one player">
+  <figcaption>One player</figcaption>
+</figure>
+<figure>
+  <img src='https://github.com/alexbel/freekick-plus/tree/master/screenshots/youth_team.png' alt="youth team">
+  <figcaption>Youth team</figcaption>
+</figure>
