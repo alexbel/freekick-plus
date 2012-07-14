@@ -18,3 +18,9 @@ One player
 
 Youth team  
 <img src="https://github.com/alexbel/freekick-plus/raw/master/screenshots/youth_team.png" alt="youth team">
+
+Match report color legend team  
+<img src="https://github.com/alexbel/freekick-plus/raw/master/screenshots/match_report_color_legend.png" alt="youth team">
+
+Match report  
+<img src="https://github.com/alexbel/freekick-plus/raw/master/screenshots/match_report.png" alt="youth team">
