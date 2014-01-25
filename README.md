@@ -1,3 +1,6 @@
+### Freekick.org is closed.
+Plugin will not be maintained anymore. :disappointed:  
+
 This add-on allows you use some functions in [www.freekick.org](http://www.freekick.org)  
 It is only two function for this moment:
 
